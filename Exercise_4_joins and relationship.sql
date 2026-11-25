@@ -33,3 +33,8 @@ SELECT * FROM attendance;
 -- Write a query to display all students and their attendance status, including students who have no attendance records yet.
 
 
+
+SELECT student.name, attendance.status
+FROM student
+LEFT JOIN attendance
+ON student.student_id = attendance.student_id;
